@@ -16,9 +16,11 @@
 
 <main>
     <div class="centerbox">
-        <h1>To-Do List</h1>
-        <List todos={todos.filter((t) => !t.done)} {remove} />
-        <List todos={todos.filter((t) => t.done)} {remove} />
+        <h1 style="text-align: center;">To-Do List</h1>
+        <div id="lists">
+            <List todos={todos.filter((t) => !t.done)} {remove} />
+            <List todos={todos.filter((t) => t.done)} {remove} />
+        </div>
         <input
             type="text"
             placeholder="yo, watchu need to do"
@@ -32,22 +34,33 @@
 
                 e.currentTarget.value = "";
             }}
+            id="input"
         />
     </div>
 </main>
 
 <style>
+    #lists {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+    #input {
+        margin: 5%;
+        margin-right: 7%;
+    }
     .centerbox {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 3;
         font-family: Arial, Helvetica, sans-serif;
-        height: 40rem;
-        width: 80rem;
+        width: 40rem;
         margin: 0 auto;
         margin-top: 3rem;
         padding-left: 2rem;
         padding-top: 1rem;
-        background-color: #b87af0;
-        border-color: #a047ed;
+        background-color: #272652;
         border-radius: 5%;
-        border-width: 8px;
     }
 </style>
