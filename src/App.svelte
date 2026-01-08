@@ -49,6 +49,10 @@
     #input {
         margin: 5%;
         margin-right: 7%;
+        background-color: #1d1c29;
+        border-color: transparent;
+        height: 3rem;
+        border-radius: 10px;
     }
     .centerbox {
         display: flex;
